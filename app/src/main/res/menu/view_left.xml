@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+        <item
+            android:id="@+id/nav_left_thoisu"
+            android:title="Thời Sự" />
+        <item
+            android:id="@+id/nav_left_thegioi"
+            android:title="Thế Giới" />
+        <item
+            android:id="@+id/nav_left_thethao"
+            android:title="Thể Thao" />
+        <item
+            android:id="@+id/nav_left_congnghe"
+            android:title="Công Nghệ" />
+    </group>
+</menu>
