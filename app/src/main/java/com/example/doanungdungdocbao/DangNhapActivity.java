@@ -1,10 +1,12 @@
 package com.example.doanungdungdocbao;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -38,6 +40,9 @@ public class DangNhapActivity extends AppCompatActivity {
         ; //sudung toolbar nhu actionbar
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); //set nut back cho toolbar
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-
+        someMethodThatUsesActivity(this);
+    }
+    public void someMethodThatUsesActivity(Activity myActivityReference){
+        myActivityReference.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }

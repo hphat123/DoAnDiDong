@@ -1,8 +1,10 @@
 package com.example.doanungdungdocbao;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -55,6 +57,7 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
         CheDoNen();
+        someMethodThatUsesActivity(this);
         btnSwitch= findViewById(R.id.switch_tuychon);
         if(saveState.getState()==true)
             btnSwitch.setChecked(true);
@@ -72,7 +75,9 @@ public class SettingActivity extends AppCompatActivity {
             }
         });
     }
-
+    public void someMethodThatUsesActivity(Activity myActivityReference){
+        myActivityReference.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
     private void CheDoNen() {
         saveState=new SaveState(this);
         if(saveState.getState()==true)

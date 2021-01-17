@@ -7,39 +7,50 @@
     android:layout_height="match_parent"
     tools:context=".TimKiemActivity">
 
-    <ImageButton
-        android:id="@+id/img_search2"
-        android:layout_width="50dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:background="@android:drawable/screen_background_light_transparent"
-        android:onClick="TimKiem"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/edit_timkiem"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_search" />
-
-    <EditText
-        android:id="@+id/edit_timkiem"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Nhập Tìm Kiếm"
-        android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/edit_timkiem"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="Nhập Tìm Kiếm"
+            android:inputType="textPersonName"
+            />
+
+        <ImageButton
+            android:id="@+id/img_search2"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:onClick="TimKiem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_timkiem"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_search" />
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_timkiem"
         android:layout_width="match_parent"
-        android:layout_height="660dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="675dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_timkiem" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+        app:layout_constraintVertical_bias="0.0" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

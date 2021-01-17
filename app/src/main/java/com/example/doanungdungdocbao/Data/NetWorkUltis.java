@@ -24,7 +24,19 @@ public class NetWorkUltis {
         }
 
     }
+    public static String getChiTiet(int id) {
+        Uri builtlURI = Uri.parse("http://10.0.2.2:8000/api/baiviet").buildUpon()
+                .appendQueryParameter("id",String.valueOf(id)).build();
+        try {
+            URL requestURL = new URL(builtlURI.toString());
 
+            return callAPI(requestURL,"GET");
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+
+    }
     public static String callAPI(URL requestURL,String method) throws IOException {
         HttpURLConnection urlConnection =null;
         String results="";

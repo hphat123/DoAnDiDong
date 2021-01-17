@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrangChiTietActivity">
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Ngày Sản Xuất"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="19/1/2020"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+        app:layout_constraintStart_toEndOf="@+id/textView13" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="1dp">
+
+            <ImageView
+                android:id="@+id/imgChiTiet"
+                android:layout_width="match_parent"
+                android:layout_height="210dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="TODO"
+                android:focusableInTouchMode="true"
+                app:layout_constraintEnd_toEndOf="@+id/txt_tieudechitiet"
+                app:layout_constraintStart_toStartOf="@+id/txt_tieudechitiet"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tieudechitiet" />
+
+            <TextView
+                android:id="@+id/txt_tieudechitiet"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="Tiêu Đề"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txt_tieudehinhanh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hình ảnh mang tính chất minh họa"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="@+id/imgChiTiet"
+                app:layout_constraintStart_toStartOf="@+id/imgChiTiet"
+                app:layout_constraintTop_toBottomOf="@+id/imgChiTiet" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bình luận"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/edittext_binh_luan" />
+
+            <EditText
+                android:id="@+id/edittext_binh_luan"
+                android:layout_width="210dp"
+                android:layout_height="33dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:ems="10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/textView19"
+                app:layout_constraintTop_toBottomOf="@+id/txt_noidung"
+                app:layout_constraintVertical_bias="0.785" />
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="46dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.619"
+                app:layout_constraintStart_toEndOf="@+id/edittext_binh_luan"
+                app:layout_constraintTop_toBottomOf="@+id/txt_noidung"
+                app:srcCompat="@android:drawable/ic_menu_send" />
+
+            <TextView
+                android:id="@+id/txt_tomtat"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginTop="12dp"
+                android:text="Tóm Tắt"
+                app:layout_constraintEnd_toEndOf="@+id/txt_tieudechitiet"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/txt_tieudechitiet"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tieudehinhanh" />
+
+            <TextView
+                android:id="@+id/txt_noidung"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp"
+                android:text="Nội Dung"
+                app:layout_constraintEnd_toEndOf="@+id/txt_tomtat"
+                app:layout_constraintStart_toStartOf="@+id/txt_tomtat"
+                app:layout_constraintTop_toBottomOf="@+id/txt_tomtat" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="09:27 (GMT+7)"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+        app:layout_constraintStart_toEndOf="@+id/textView14" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

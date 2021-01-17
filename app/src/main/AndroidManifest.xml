@@ -24,6 +24,10 @@
         <activity android:name=".MainActivity"
             android:theme="@style/Theme.DoAn">
         </activity>
+        <activity android:name=".TrangChiTietActivity"
+            android:theme="@style/Theme.DoAn">
+
+        </activity>
     <activity android:name=".TimKiemActivity"
         android:parentActivityName=".MainActivity"
         android:theme="@style/Theme.DoAn">

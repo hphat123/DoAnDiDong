@@ -1,6 +1,7 @@
 package com.example.doanungdungdocbao.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +10,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.doanungdungdocbao.Model.BaiViet;
 import com.example.doanungdungdocbao.R;
+import com.example.doanungdungdocbao.TrangChiTietActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -45,9 +46,34 @@ public class BaiVietAdapter extends RecyclerView.Adapter<BaiVietAdapter.BaiVietV
         holder.mTieuDe.setText(baiviet.getTieude().toString());
         holder.mTomTat.setText(baiviet.getTomtat().toString());
         holder.mNoiBat.setText(baiviet.getNoibat().toString());
-
+        holder.mTieuDe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), TrangChiTietActivity.class);
+                String id = String.valueOf(baiviet.getId());
+                intent.putExtra("ID",id);
+                v.getContext().startActivity(intent);
+            }
+        });
+        holder.mTomTat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),TrangChiTietActivity.class);
+                String id = String.valueOf(baiviet.getId());
+                intent.putExtra("ID",id);
+                v.getContext().startActivity(intent);
+            }
+        });
+        holder.mHinhAnh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(),TrangChiTietActivity.class);
+                String id = String.valueOf(baiviet.getId());
+                intent.putExtra("ID",id);
+                v.getContext().startActivity(intent);
+            }
+        });
     }
-
     @Override
     public int getItemCount() {
         return listNews.size();
