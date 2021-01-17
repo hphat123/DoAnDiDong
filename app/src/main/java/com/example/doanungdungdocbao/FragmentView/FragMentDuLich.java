@@ -13,7 +13,6 @@ import androidx.loader.content.Loader;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-
 import com.example.doanungdungdocbao.Adapter.BaiVietAdapter;
 import com.example.doanungdungdocbao.AsysTaskLoader.BaiVietLoader;
 import com.example.doanungdungdocbao.Model.BaiViet;
@@ -22,7 +21,9 @@ import com.example.doanungdungdocbao.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FragMentTheThao extends Fragment implements LoaderManager.LoaderCallbacks<List<BaiViet>> {
+
+public class FragMentDuLich extends Fragment implements LoaderManager.LoaderCallbacks<List<BaiViet>>{
+
     private RecyclerView recyclerView;
     private BaiVietAdapter mAdapter;
     LoaderManager loaderManager;
@@ -36,23 +37,22 @@ public class FragMentTheThao extends Fragment implements LoaderManager.LoaderCal
     private String mParam1;
     private String mParam2;
 
-    public FragMentTheThao() {
+    public FragMentDuLich() {
         // Required empty public constructor
     }
+
     // TODO: Rename and change types and number of parameters
-    public static FragMentTheThao newInstance(String param1, String param2) {
-        FragMentTheThao fragment = new FragMentTheThao();
+    public static FragMentDuLich newInstance(String param1, String param2) {
+        FragMentDuLich fragment = new FragMentDuLich();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
-
-    @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        recyclerView=view.findViewById(R.id.recyclerview_thethao);
+        recyclerView=view.findViewById(R.id.recyclerview_dulich);
         mAdapter=new BaiVietAdapter(getContext(),listNews);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(mAdapter);
@@ -68,7 +68,7 @@ public class FragMentTheThao extends Fragment implements LoaderManager.LoaderCal
     @NonNull
     @Override
     public Loader<List<BaiViet>> onCreateLoader(int id, @Nullable Bundle args) {
-        return new BaiVietLoader(getContext(),"3");
+        return new BaiVietLoader(getContext(),"7");
     }
 
     @Override
@@ -84,7 +84,6 @@ public class FragMentTheThao extends Fragment implements LoaderManager.LoaderCal
     public void onLoaderReset(@NonNull Loader<List<BaiViet>> loader) {
 
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,6 +97,6 @@ public class FragMentTheThao extends Fragment implements LoaderManager.LoaderCal
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_thethao, container, false);
+        return inflater.inflate(R.layout.fragment_dulich, container, false);
     }
 }

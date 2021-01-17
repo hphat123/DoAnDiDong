@@ -90,6 +90,22 @@ public class FragMentFirst extends Fragment {
                         mFirstViewPager.setCurrentItem(3);
                         mDrawerLayout.closeDrawers();
                         return true;
+                    case R.id.nav_left_giaitri:
+                        mFirstViewPager.setCurrentItem(4);
+                        mDrawerLayout.closeDrawers();
+                        return true;
+                    case R.id.nav_left_khoahoc:
+                        mFirstViewPager.setCurrentItem(5);
+                        mDrawerLayout.closeDrawers();
+                        return true;
+                    case R.id.nav_left_dulich:
+                        mFirstViewPager.setCurrentItem(6);
+                        mDrawerLayout.closeDrawers();
+                        return true;
+                    case R.id.nav_left_suckhoe:
+                        mFirstViewPager.setCurrentItem(7);
+                        mDrawerLayout.closeDrawers();
+                        return true;
                 }
                 // close drawer when item is tapped
                 return true;
@@ -161,6 +177,10 @@ public class FragMentFirst extends Fragment {
         adapter.addFragment(new FragMentTheGioi(),"Thế Giới");
         adapter.addFragment(new FragMentTheThao(),"Thể Thao");
         adapter.addFragment(new FragMentCongNghe(),"Công Nghệ");
+        adapter.addFragment(new FragMentGiaiTri(),"Giải Trí");
+        adapter.addFragment(new FragMentKhoaHoc(),"Khoa Học");
+        adapter.addFragment(new FragMentDuLich(),"Du Lịch");
+        adapter.addFragment(new FragMentSucKhoe(),"Sức Khỏe");
         viewPager.setAdapter(adapter);
     }
 
