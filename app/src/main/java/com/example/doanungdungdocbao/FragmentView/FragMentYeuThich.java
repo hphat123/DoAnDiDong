@@ -11,12 +11,13 @@ import androidx.fragment.app.Fragment;
 
 import com.example.doanungdungdocbao.R;
 
-public class FragMentSetting extends Fragment {
+public class FragMentYeuThich extends Fragment {
     private View mView;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        mView = inflater.inflate(R.layout.fragment_setting, container, false);
+        mView = inflater.inflate(R.layout.fragment_yeuthich, container, false);
+
         return mView;
     }
 }

@@ -7,10 +7,10 @@
         android:title="Trang Chủ" />
     <item
         android:id="@+id/nav_yeuthich"
-        android:icon="@drawable/ic_favorite"
-        android:title="Yêu Thích" />
+        android:icon="@drawable/ic_person"
+        android:title="Tin Của Tui" />
     <item
         android:id="@+id/nav_caidat"
-        android:icon="@drawable/ic_setting"
-        android:title="Cài Đặt" />
+        android:icon="@drawable/ic_notifications"
+        android:title="Thông Báo" />
 </menu>

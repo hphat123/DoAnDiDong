@@ -2,25 +2,26 @@ package com.example.doanungdungdocbao;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.example.doanungdungdocbao.Adapter.BottomNavPagerAdapter;
 import com.example.doanungdungdocbao.Data.SaveState;
 import com.example.doanungdungdocbao.FragmentView.FragMentFirst;
-import com.example.doanungdungdocbao.FragmentView.FragMentSetting;
-import com.example.doanungdungdocbao.FragmentView.FragMentThoiSu;
+import com.example.doanungdungdocbao.FragmentView.FragMentYeuThich;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -29,7 +30,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    public  static Boolean mInNightMode=false;
+
     private TabLayout mTabLayout;
     private ViewPager viewPager;
     private TextView txt_tile;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton imgBtnSearch;
     private ImageButton imgBtnClose;
     SaveState saveState;
+    private Switch btnSwitch;
     public static Integer tindaxem;
     public static List<Integer> dsTinDaXem = new ArrayList<>();
     public static List<Integer> tinYeuThich = new ArrayList<>();
@@ -48,8 +50,11 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.nav_trangchu:
                     viewPager.setCurrentItem(0);
                     return true;
-                case R.id.nav_caidat:
+                case R.id.nav_yeuthich:
                     viewPager.setCurrentItem(1);
+                    return true;
+                case R.id.nav_caidat:
+                    viewPager.setCurrentItem(2);
                     return true;
             }
             return false;
@@ -74,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
 
         });
         NutTimKiem();
+        NutSetting();
+        //Xử Lý Khi Đổi Màu Nền
     }
         // Xử Lý Nút Thoát
     public void onClosePressed() {
@@ -95,10 +102,10 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         BottomNavPagerAdapter adapter = new BottomNavPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         adapter.addFragment(new FragMentFirst());
-        adapter.addFragment(new FragMentThoiSu());
-        adapter.addFragment(new FragMentSetting());
+        adapter.addFragment(new FragMentYeuThich());
         viewPager.setAdapter(adapter);
     }
+    //Xử Lý Sự Kiện Onclick NutTimKiem
     public void NutTimKiem(){
         imgBtnSearch = findViewById(R.id.img_search);
         imgBtnSearch.setOnClickListener(new View.OnClickListener() {
@@ -109,7 +116,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
+    public void NutSetting()
+    {
+        imgBtnSetting = findViewById(R.id.img_setting);
+        imgBtnSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,SettingActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
 }

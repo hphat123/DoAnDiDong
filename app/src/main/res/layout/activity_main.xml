@@ -17,42 +17,40 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageButton
-            android:id="@+id/img_search"
-            android:layout_width="37dp"
-            android:layout_height="28dp"
-            android:layout_marginEnd="16dp"
-            android:background="@color/colorWhite"
-            android:onClick="nextTimKiem"
-            app:layout_constraintBottom_toBottomOf="@+id/img_setting"
-            app:layout_constraintEnd_toStartOf="@+id/img_setting"
-            app:layout_constraintTop_toTopOf="@+id/img_setting"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/ic_search"
-            />
-
-        <ImageButton
             android:id="@+id/img_setting"
-            android:layout_width="36dp"
-            android:layout_height="27dp"
-            android:layout_marginTop="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
-            android:layout_marginBottom="3dp"
-            android:background="@color/colorWhite"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_setting"
-            />
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_setting" />
+
+        <ImageButton
+            android:id="@+id/img_search"
+            android:layout_width="37dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="6dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/img_setting"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_search" />
 
         <ImageButton
             android:id="@+id/img_close"
             android:layout_width="47dp"
             android:layout_height="39dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="1dp"
-            app:layout_constraintEnd_toStartOf="@+id/img_search"
-            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/ic_close" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -77,7 +75,7 @@
         android:id="@+id/bot_nav_view"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FFFFFF"
+        android:background="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

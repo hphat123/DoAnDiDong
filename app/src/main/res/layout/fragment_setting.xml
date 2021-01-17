@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_setting"
             android:layout_width="match_parent"
-            android:layout_marginTop="20dp"
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackground"
             android:clickable="true">
@@ -21,22 +21,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_centerInParent="true"
-                android:gravity="center_vertical"
-                android:text="Tin Tức"
+                android:gravity="center"
+                android:layout_marginRight="100dp"
+                android:layout_marginLeft="100dp"
+                android:text="Thiết Lập"
                 android:textColor="@color/colorBlack"
                 android:textSize="18sp" />
-        </RelativeLayout>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="0.5dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:background="@color/colorBlack" />
+        </androidx.appcompat.widget.Toolbar>
 
         <LinearLayout
-            android:id="@+id/layout_contain_news"
+            android:id="@+id/layout_contain_tintuc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -44,7 +38,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/layout_mark_news"
+                android:id="@+id/layout_dangnhap"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackground"
@@ -63,7 +57,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
-                    android:layout_toLeftOf="@+id/ic_more_vert_black_24dp_mark"
+                    android:layout_toLeftOf="@+id/img_dangnhap"
                     android:layout_toRightOf="@+id/ic_turned_in_unselect_24dp"
                     android:gravity="center_vertical"
                     android:text="Đăng Nhập"
@@ -71,7 +65,7 @@
                     android:textSize="18sp" />
 
                 <ImageButton
-                    android:id="@+id/ic_more_vert_black_24dp_mark"
+                    android:id="@+id/img_dangnhap"
                     android:layout_width="48dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
@@ -93,7 +87,7 @@
                 android:background="@color/colorBlack" />
 
             <RelativeLayout
-                android:id="@+id/layout_history_news"
+                android:id="@+id/layout_dangky"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackground"
@@ -113,7 +107,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_centerInParent="true"
-                    android:layout_toLeftOf="@+id/ic_more_vert_black_24dp_history_news"
+                    android:layout_toLeftOf="@+id/img_dangky"
                     android:layout_toRightOf="@+id/ic_history_black_24dp_history_news"
                     android:gravity="center_vertical"
                     android:text="Đăng Ký"
@@ -121,7 +115,7 @@
                     android:textSize="18sp" />
 
                 <ImageButton
-                    android:id="@+id/ic_more_vert_black_24dp_history_news"
+                    android:id="@+id/img_dangky"
                     android:layout_width="48dp"
                     android:layout_height="match_parent"
                     android:layout_alignParentRight="true"
@@ -143,7 +137,9 @@
 
 
         </LinearLayout>
+
         <RelativeLayout
+            android:id="@+id/layout_title_hoatdong"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackground"
@@ -165,7 +161,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/colorBlack" />
         <LinearLayout
-            android:id="@+id/layout_contain_videos"
+            android:id="@+id/layout_contain_hoatdong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -173,7 +169,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/layout_video_love"
+                android:id="@+id/layout_tindaxem"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackground"
@@ -219,7 +215,7 @@
                 android:layout_marginRight="15dp"
                 android:background="@color/colorBlack" />
             <RelativeLayout
-                android:id="@+id/layout_history_video"
+                android:id="@+id/layout_binhluan"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="?attr/selectableItemBackground"
@@ -270,7 +266,7 @@
         </LinearLayout>
 
         <RelativeLayout
-            android:id="@+id/layout_offline_news"
+            android:id="@+id/layout_title_hethong"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:background="?attr/selectableItemBackground"
@@ -292,7 +288,7 @@
             android:layout_marginRight="15dp"
             android:background="@color/colorBlack" />
         <LinearLayout
-            android:id="@+id/layout_contain_systems"
+            android:id="@+id/layout_contain_hethong"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
@@ -300,6 +296,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
+                android:id="@+id/layout_chedotoi"
                 android:layout_width="match_parent"
                 android:layout_height="53dp">
 
@@ -311,6 +308,7 @@
                     android:layout_centerInParent="true"
                     android:scaleType="center"
                     card_view:srcCompat="@drawable/ic_dark_mode" />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -320,7 +318,8 @@
                     android:gravity="center_vertical"
                     android:text="Chế Độ Nền"
                     android:textColor="@color/colorBlack"
-                    android:textSize="18sp"/>
+                    android:textSize="18sp" />
+
                 <Switch
                     android:id="@+id/switch_tuychon"
                     android:layout_width="48dp"
@@ -331,8 +330,7 @@
                     android:background="?attr/selectableItemBackground"
                     android:clickable="true"
                     android:scaleType="center"
-                    android:src="@drawable/ic_arrow_right"
-                    />
+                    android:src="@drawable/ic_arrow_right" />
             </RelativeLayout>
         </LinearLayout>
 

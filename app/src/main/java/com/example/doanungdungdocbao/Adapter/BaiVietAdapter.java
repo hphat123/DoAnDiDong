@@ -40,7 +40,7 @@ public class BaiVietAdapter extends RecyclerView.Adapter<BaiVietAdapter.BaiVietV
     public void onBindViewHolder(@NonNull BaiVietViewHolder holder, int position) {
         final BaiViet baiviet = listNews.get(position);
         Picasso.get()
-                .load(baiviet.getHinh())
+                .load("http://10.0.2.2:8000/storage/upload/tintuc/"+listNews.get(position).getHinh())
                 .into(holder.mHinhAnh);
         holder.mTieuDe.setText(baiviet.getTieude().toString());
         holder.mTomTat.setText(baiviet.getTomtat().toString());
